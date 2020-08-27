@@ -31,4 +31,14 @@
     self.MainDisplay.text = [self.MainDisplay.text stringByAppendingString:sender.titleLabel.text];
 }
 
+- (IBAction)Dot:(UIButton *)sender {
+    if (![self.MainDisplay.text containsString:@"."]) {
+        self.MainDisplay.text = [self.MainDisplay.text stringByAppendingString:sender.titleLabel.text];
+    }
+}
+
+- (IBAction)ClearAll:(UIButton *)sender {
+    self.MainDisplay.text = @"0";
+}
+
 @end
