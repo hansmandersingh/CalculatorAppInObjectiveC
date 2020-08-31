@@ -20,7 +20,7 @@ int tempNum;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+     
 }
 
 - (IBAction)Zero:(UIButton *)sender { //all buttons clicks handler
