@@ -15,6 +15,7 @@
 
 @implementation ViewController
 
+int tempNum;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,6 +45,36 @@
 
 - (IBAction)Plus:(UIButton *)sender {
     
+    tempNum += [self.MainDisplay.text intValue];
+    self.Symbol = sender.titleLabel.text;
+    
+    self.SmallDisplay.text = [NSString stringWithFormat:@"%i%@",tempNum,self.Symbol];
+    
+    self.MainDisplay.text = @"0";
+}
+- (IBAction)Sub:(UIButton *)sender {
+    tempNum -= [self.MainDisplay.text intValue];
+    self.Symbol = sender.titleLabel.text;
+    
+    self.SmallDisplay.text = [NSString stringWithFormat:@"%i%@",tempNum,self.Symbol];
+    
+    self.MainDisplay.text = @"0";
+}
+- (IBAction)Multiply:(UIButton *)sender {
+    tempNum *= [self.MainDisplay.text intValue];
+    self.Symbol = sender.titleLabel.text;
+    
+    self.SmallDisplay.text = [NSString stringWithFormat:@"%i%@",tempNum,self.Symbol];
+    
+    self.MainDisplay.text = @"0";
+}
+- (IBAction)Divide:(UIButton *)sender {
+    tempNum /= [self.MainDisplay.text intValue];
+    self.Symbol = sender.titleLabel.text;
+    
+    self.SmallDisplay.text = [NSString stringWithFormat:@"%i%@",tempNum,self.Symbol];
+    
+    self.MainDisplay.text = @"0";
 }
 
 @end
