@@ -96,9 +96,21 @@ int tempNum;
     self.MainDisplay.text = @"0";
 }
 - (IBAction)Equals:(UIButton *)sender {
-    if ([self.SmallDisplay.text characterAtIndex:[self.SmallDisplay.text length]]) {
-        
+    char thisChar = [self.SmallDisplay.text characterAtIndex:[self.SmallDisplay.text length] - 1];
+    
+    if (thisChar == '+') {
+        tempNum += [self.MainDisplay.text intValue];
+    } else if (thisChar == '-') {
+        tempNum -= [self.MainDisplay.text intValue];
+    } else if (thisChar == '*') {
+        tempNum *= [self.MainDisplay.text intValue];
+    } else if (thisChar == '/') {
+        tempNum /= [self.MainDisplay.text intValue];
     }
+    
+    self.MainDisplay.text = [NSString stringWithFormat:@"Total: %d", tempNum];
+    
+    self.SmallDisplay.text = @"";
 }
 
 @end
