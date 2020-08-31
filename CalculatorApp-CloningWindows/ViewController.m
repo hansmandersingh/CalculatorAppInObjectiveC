@@ -11,15 +11,10 @@
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *MainDisplay;
-@property (weak, nonatomic) IBOutlet UILabel *SmallDisplay;
-@property NSString *Symbol;
-
 @end
 
 @implementation ViewController
 
-float tempNum = 0;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,22 +37,13 @@ float tempNum = 0;
 }
 
 - (IBAction)ClearAll:(UIButton *)sender {
+    self.Symbol = nil;
     self.MainDisplay.text = @"0";
+    self.SmallDisplay.text = @"";
 }
 
 - (IBAction)Plus:(UIButton *)sender {
-    tempNum = [self.MainDisplay.text integerValue];
-    self.Symbol = [self.Symbol stringByAppendingString: sender.titleLabel.text];
     
-    if (tempNum != 0) {
-        tempNum += [self.MainDisplay.text integerValue];
-    } else {
-        tempNum = [self.MainDisplay.text integerValue];
-    }
-    
-    NSString *newString = [NSString stringWithFormat:@"%f", tempNum];
-    
-    self.SmallDisplay.text = [newString stringByAppendingString:self.Symbol];
 }
 
 @end

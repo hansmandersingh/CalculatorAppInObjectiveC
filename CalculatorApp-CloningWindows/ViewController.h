@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *MainDisplay;
+@property (weak, nonatomic) IBOutlet UILabel *SmallDisplay;
+@property NSString *Symbol;
 
 @end
 
