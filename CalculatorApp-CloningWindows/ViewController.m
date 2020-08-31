@@ -44,16 +44,24 @@ int tempNum;
 }
 
 - (IBAction)Plus:(UIButton *)sender {
+    if (tempNum) {
+        tempNum += [self.MainDisplay.text intValue];
+    } else {
+        tempNum = [self.MainDisplay.text intValue];
+    }
     
-    tempNum += [self.MainDisplay.text intValue];
     self.Symbol = sender.titleLabel.text;
-    
     self.SmallDisplay.text = [NSString stringWithFormat:@"%i%@",tempNum,self.Symbol];
-    
     self.MainDisplay.text = @"0";
 }
 - (IBAction)Sub:(UIButton *)sender {
-    tempNum -= [self.MainDisplay.text intValue];
+    if (tempNum) {
+        tempNum -= [self.MainDisplay.text intValue];
+        
+    }else {
+        tempNum = [self.MainDisplay.text intValue];
+        
+    }
     self.Symbol = sender.titleLabel.text;
     
     self.SmallDisplay.text = [NSString stringWithFormat:@"%i%@",tempNum,self.Symbol];
@@ -61,7 +69,13 @@ int tempNum;
     self.MainDisplay.text = @"0";
 }
 - (IBAction)Multiply:(UIButton *)sender {
-    tempNum *= [self.MainDisplay.text intValue];
+    if (tempNum) {
+        tempNum *= [self.MainDisplay.text intValue];
+        
+    } else {
+        tempNum = [self.MainDisplay.text intValue];
+    }
+    
     self.Symbol = sender.titleLabel.text;
     
     self.SmallDisplay.text = [NSString stringWithFormat:@"%i%@",tempNum,self.Symbol];
@@ -69,12 +83,22 @@ int tempNum;
     self.MainDisplay.text = @"0";
 }
 - (IBAction)Divide:(UIButton *)sender {
-    tempNum /= [self.MainDisplay.text intValue];
+    if (tempNum) {
+        tempNum /= [self.MainDisplay.text intValue];
+    } else {
+        tempNum = [self.MainDisplay.text intValue];
+    }
+    
     self.Symbol = sender.titleLabel.text;
     
     self.SmallDisplay.text = [NSString stringWithFormat:@"%i%@",tempNum,self.Symbol];
     
     self.MainDisplay.text = @"0";
+}
+- (IBAction)Equals:(UIButton *)sender {
+    if ([self.SmallDisplay.text characterAtIndex:[self.SmallDisplay.text length]]) {
+        
+    }
 }
 
 @end

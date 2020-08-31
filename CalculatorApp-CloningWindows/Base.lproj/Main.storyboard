@@ -242,7 +242,6 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
                                 </state>
                                 <connections>
-                                    <action selector="Plus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZTk-gv-efh"/>
                                     <action selector="Sub:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Op-8H-ZHj"/>
                                 </connections>
                             </button>
@@ -257,8 +256,6 @@
                                 </state>
                                 <connections>
                                     <action selector="Multiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kmJ-b9-LGq"/>
-                                    <action selector="Plus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kd1-Tq-8U2"/>
-                                    <action selector="Sub:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mkg-5R-kHb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cE-s1-P7M">
@@ -272,9 +269,19 @@
                                 </state>
                                 <connections>
                                     <action selector="Divide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aVc-jD-x61"/>
-                                    <action selector="Multiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rfm-n9-8xT"/>
-                                    <action selector="Plus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o4b-qd-Hie"/>
-                                    <action selector="Sub:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bx7-W9-D9v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AB7-Jz-pVd">
+                                <rect key="frame" x="306" y="796" width="88" height="64"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="=">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="heavy"/>
+                                </state>
+                                <connections>
+                                    <action selector="Equals:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oww-6z-Lex"/>
                                 </connections>
                             </button>
                         </subviews>
